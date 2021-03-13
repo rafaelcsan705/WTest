@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "MainViewController.checkContent():MainViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "postalCodeArray">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MainViewController.searchBar(_:textDidChange:):MainViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "text.num_cod_postal">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in GetData.setPostalCode():GetData.swift">
+      </ContextState>
+      <ContextState
+         contextName = "MainViewController.tableView(_:cellForRowAt:):MainViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.postalCodeArray?.count">
+            </PersistentString>
+            <PersistentString
+               value = "self.searchData">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in MainViewController.searchBar(_:textDidChange:):MainViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "text.ext_cod_postal">
+            </PersistentString>
+            <PersistentString
+               value = "text.num_cod_postal">
+            </PersistentString>
+            <PersistentString
+               value = "text.desig_postal!">
+            </PersistentString>
+            <PersistentString
+               value = "searchData">
+            </PersistentString>
+            <PersistentString
+               value = "self.searchData.contains(text)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

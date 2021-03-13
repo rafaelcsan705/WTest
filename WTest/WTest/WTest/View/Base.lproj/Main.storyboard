@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="main_vc" id="BYZ-38-t0r" customClass="MainViewController" customModule="WTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="os9-QL-mCv">
+                                <rect key="frame" x="0.0" y="94" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f7p-RI-God">
+                                <rect key="frame" x="0.0" y="150" width="414" height="712"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="DQq-6h-FXZ">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DQq-6h-FXZ" id="I1m-78-cqc">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GiC-lC-8X7">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Download" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="a5Z-Lk-4nO">
+                                        <rect key="frame" x="16" y="5" width="382" height="40"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstItem="a5Z-Lk-4nO" firstAttribute="top" secondItem="GiC-lC-8X7" secondAttribute="top" constant="5" id="5l8-h0-Jqs"/>
+                                    <constraint firstAttribute="height" constant="50" id="NQm-Gw-9fX"/>
+                                    <constraint firstItem="a5Z-Lk-4nO" firstAttribute="leading" secondItem="GiC-lC-8X7" secondAttribute="leading" constant="16" id="WSx-xN-KxB"/>
+                                    <constraint firstAttribute="bottom" secondItem="a5Z-Lk-4nO" secondAttribute="bottom" constant="5" id="m8Q-1j-col"/>
+                                    <constraint firstAttribute="trailing" secondItem="a5Z-Lk-4nO" secondAttribute="trailing" constant="16" id="ywc-Jg-VPi"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f7p-RI-God" secondAttribute="trailing" id="2Ba-Vp-Hcs"/>
+                            <constraint firstItem="f7p-RI-God" firstAttribute="top" secondItem="os9-QL-mCv" secondAttribute="bottom" id="2p4-oW-fce"/>
+                            <constraint firstItem="GiC-lC-8X7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4lF-nH-BF6"/>
+                            <constraint firstItem="os9-QL-mCv" firstAttribute="top" secondItem="GiC-lC-8X7" secondAttribute="bottom" id="9Mi-Wv-Tmr"/>
+                            <constraint firstItem="os9-QL-mCv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MRp-Kc-F6E"/>
+                            <constraint firstItem="GiC-lC-8X7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TWV-gm-SwP"/>
+                            <constraint firstItem="f7p-RI-God" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="X9U-Nf-ipd"/>
+                            <constraint firstItem="os9-QL-mCv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="c59-ik-wrD"/>
+                            <constraint firstItem="os9-QL-mCv" firstAttribute="top" secondItem="a5Z-Lk-4nO" secondAttribute="bottom" constant="5" id="dY5-hJ-BlF"/>
+                            <constraint firstItem="GiC-lC-8X7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gZA-HL-CPn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="f7p-RI-God" secondAttribute="bottom" id="jrk-Qc-SIl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="lZb-Aj-iQs"/>
+                    <connections>
+                        <outlet property="bottomAnchorTableView" destination="jrk-Qc-SIl" id="7iF-q1-RbV"/>
+                        <outlet property="downloadLabel" destination="a5Z-Lk-4nO" id="f97-4S-Dbw"/>
+                        <outlet property="downloadView" destination="GiC-lC-8X7" id="0Ek-Zc-12k"/>
+                        <outlet property="searchBar" destination="os9-QL-mCv" id="LdP-hG-7nw"/>
+                        <outlet property="tableView" destination="f7p-RI-God" id="2Es-yK-2eo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-939.13043478260875" y="47.544642857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
