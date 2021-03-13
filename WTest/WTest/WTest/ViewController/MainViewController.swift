@@ -42,6 +42,7 @@ class MainViewController: UIViewController, URLSessionDownloadDelegate, UITableV
     }
     
     // MARK: - Functions
+    // Get data from CoreData or CSV File and save in Core Data
     func checkContent() {
         postalCodeArray = try! context.fetch(PostalCode.fetchRequest())
         print(" postalCodeArray count: \(postalCodeArray.count)")
@@ -58,6 +59,7 @@ class MainViewController: UIViewController, URLSessionDownloadDelegate, UITableV
         }
     }
 
+    // Fetch to Core Data and update TableView after complete download.
     func completeCoreData() {
         self.postalCodeArray = try! context.fetch(PostalCode.fetchRequest())
         
@@ -67,6 +69,7 @@ class MainViewController: UIViewController, URLSessionDownloadDelegate, UITableV
         }
     }
 
+    // Update TableView from csv file.
     func showCurrentArray() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
@@ -74,6 +77,7 @@ class MainViewController: UIViewController, URLSessionDownloadDelegate, UITableV
     }
     
     // MARK: - SearchBar
+    // Set data on searchBarArray when user start typing on searchBar.
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         DispatchQueue.main.async {
             
@@ -123,6 +127,7 @@ class MainViewController: UIViewController, URLSessionDownloadDelegate, UITableV
         }
     }
     
+    // Clear SearchBar, searchBarArray and update TableView Contraint when press CancelButton on SearchBar
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.text = ""
         self.searchData = []
@@ -132,8 +137,8 @@ class MainViewController: UIViewController, URLSessionDownloadDelegate, UITableV
         self.searchBar.endEditing(true)
     }
     
+    // Show alert if postalCodeArray is not complete or get height of keyboard
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
-    
         if self.postalCodeArray.count < 326000 {
             let alert = UIAlertController(title: "Aguarde até concluir o download.", message: nil, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
@@ -152,6 +157,7 @@ class MainViewController: UIViewController, URLSessionDownloadDelegate, UITableV
         return true
     }
     
+    // Function to get height of Keyboard and update TableView Bottom Constraint
     @objc func keyboardWillShow(_ notification: Notification) {
         if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
             let keyboardRectangle = keyboardFrame.cgRectValue
@@ -213,6 +219,7 @@ class MainViewController: UIViewController, URLSessionDownloadDelegate, UITableV
         }
     }
     
+    // Get Data from CSV
     func getCSVData(url: String) {
         DispatchQueue.main.async {
             do {
@@ -235,6 +242,7 @@ class MainViewController: UIViewController, URLSessionDownloadDelegate, UITableV
         }
     }
     
+    // Save data on CoreData
     func setPostalCode() {
         DispatchQueue.global(qos: .userInteractive).async {
             for i in self.countOfCoreData ..< self.postalCodeStructArray.count {
@@ -252,6 +260,7 @@ class MainViewController: UIViewController, URLSessionDownloadDelegate, UITableV
         }
     }
     
+    // Update label while saving on CoreData
     func updateDownloadLabel(position: Int, count: Int){
         DispatchQueue.main.async {
             self.downloadView.isHidden = false
